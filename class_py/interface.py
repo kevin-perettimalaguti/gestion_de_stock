@@ -1,14 +1,15 @@
 from tkinter import *
 from tkinter import ttk
-# from class_py.product import Product
-# from class_py.category import Category
+from class_py.product import Product
+from class_py.category import Category
 
-# product = Product()
-# category = Category()
+
 
 class Interface:
     def __init__(self, database):
         self.database = database
+        self.product = Product(database)
+        self.category = Category(database)
         self.fenetre = Tk()
         self.fenetre.geometry("900x500")
         self.fenetre.title("Stockage store")
